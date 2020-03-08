@@ -95,11 +95,6 @@ menus:
           x: 112
           y: 462
         sprite: startButton
-      load:  
-        position:
-          x: 320
-          y: 462
-        sprite: loadButton
       settings:
         position:
           x: 528
@@ -117,11 +112,6 @@ menus:
           x: 320
           y: 500
         sprite: startButton
-      load:
-        position:
-          x: 528
-          y: 500
-        sprite: loadButton
     sliders:
       textSpeed: 
         position:
