@@ -1,55 +1,40 @@
 backgrounds:
-  bus_station: assets/backgrounds/bus_station_afternoon.jpg
-  room: assets/backgrounds/room_day.jpg
-  room_night: assets/backgrounds/room_night.jpg
-  room_night_light: assets/backgrounds/room_night_light.jpg
-  school_morning: assets/backgrounds/school_corridor.jpg
-  school_afternoon: assets/backgrounds/school_corridor_afternoon.jpg
-  street_morning: assets/backgrounds/school_front_morning.jpg
-  street_afternoon: assets/backgrounds/school_front_afternoon.jpg
-  store: assets/backgrounds/store.jpg
+  day: assets/backgrounds/day.jpg
+  night: assets/backgrounds/day.jpg
+  room: assets/backgrounds/bedroom-morning.png
+  room_night: assets/backgrounds/bedroom-afternoon.png
+  living_room: assets/backgrounds/lvingroom.jpg
+  outdoor: assets/backgrounds/outdoor-general.jpg
+  outdoor_cat: assets/backgrounds/outdoor-cat.jpg
+  doctor_office: assets/backgrounds/doctor.jpg
+  kitchen: assets/backgrounds/kitchen.png
 characters:
-  deuzi:
-    displayName: Deuzilene
-    speechColour: "#ca90cf"
+  kevin:
+    displayName: Kevin
+    speechColour: "#ffffff"
     looks:
-      normal: assets/characters/Char3NormalSchool.png
-      happy: assets/characters/Char3HappySchool.png
-      angry: assets/characters/Char3AngrySchool.png
-      normalC: assets/characters/Char3Normal.png
-      happyC: assets/characters/Char3Happy.png
-      angryC: assets/characters/Char3Angry.png
-  liz:
-    displayName: Liz
-    speechColour: "#d5e6e7"
+      normal: assets/characters/male-normal.png
+      happy: assets/characters/male-normal-happy.png
+      sad: assets/characters/male-normal-sad.png
+      sick: assets/characters/male-normal-facemask.png
+  jenny:
+    displayName: Jenny
+    speechColour: "#ffffff"
     looks:
-      normal: assets/characters/Char2NormalSchool.png
-      happy: assets/characters/Char2HappySchool.png
-      angry: assets/characters/Char2AngrySchool.png
-      normalC: assets/characters/Char2Normal.png
-      happyC: assets/characters/Char2Happy.png
-      angryC: assets/characters/Char2Angry.png
-  marco:
-    displayName: Marco
-    speechColour: "#123022"
+      normal: assets/characters/female-normal.png
+      happy: assets/characters/female-normal-happy.png
+      sad: assets/characters/female-normal-sad.png
+      sick: assets/characters/female-normal-facemask.png
+  cat:
+    displayName: Stray Cat
+    speechColour: "#ffffff"
     looks:
-      normal: assets/characters/Char1NormalSchool.png
-      happy: assets/characters/Char1HappySchool.png
-      angry: assets/characters/Char1AngrySchool.png
-      worry: assets/characters/Char1WorrySchool.png
-      normalC: assets/characters/Char1Normal.png
-      happyC: assets/characters/Char1Happy.png
-      angryC: assets/characters/Char1Angry.png
-  jair:
-    displayName: Jair
-    speechColour: "#6a2b2b"
+      normal: assets/characters/cat.png
+  doctor:
+    displayName: Doctor Lin
+    speechColour: "#ffffff"
     looks:
-      normal: assets/characters/Char4NormalSchool.png
-      happy: assets/characters/Char4HappySchool.png
-      angry: assets/characters/Char4AngrySchool.png
-      normalC: assets/characters/Char4Normal.png
-      happyC: assets/characters/Char4Happy.png
-      angryC: assets/characters/Char4Angry.png
+      normal: assets/characters/doctor.png
 cgs:
   phone1: assets/objects/phone1.png
   phone2: assets/objects/phone2.png

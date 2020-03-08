@@ -1,7 +1,7 @@
 
 start:
   - play morningBGM:
-  - show street_morning: WITH FADE
+  - show day: WITH FADE
   - show deuzi: normal AT CENTER WITH FADE
   - deuzi says: Hello, are you the new student?
   - deuzi says happy: Welcome to our Tutorial Game!
