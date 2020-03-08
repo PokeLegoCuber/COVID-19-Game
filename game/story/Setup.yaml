@@ -1,9 +1,10 @@
 backgrounds:
+  afternoon: assets/backgrounds/afternoon.jpg
   day: assets/backgrounds/day.jpg
   night: assets/backgrounds/day.jpg
   room: assets/backgrounds/bedroom-morning.png
   room_night: assets/backgrounds/bedroom-afternoon.png
-  living_room: assets/backgrounds/lvingroom.jpg
+  living_room: assets/backgrounds/livingroom.jpg
   outdoor: assets/backgrounds/outdoor-general.jpg
   outdoor_cat: assets/backgrounds/outdoor-cat.jpg
   doctor_office: assets/backgrounds/doctor.jpg
