@@ -1,5 +1,5 @@
 start:
-  - var health: 7
+  - var health: 5
   - show day: WITH FADE
   - text: Welcome to the Day in the Life of Kevin!
   - text: In the game we’ll explore what life is like for a student in modern day China during the Coronavirus outbreak.
@@ -14,7 +14,7 @@ dayOne:
   - text: Due to the virus outbreak, the school has made all their classes online.
   - kevin says sad: Time to login to my 8:30 AM class, Chinese History 101.
   - kevin says: "*sigh*"
-  - kevin says normal: At least I get to spend time with Jenny later today. She said she wanted to go to the store.
+  - kevin says normal: At least I'll get to spend time with Jenny later today. She said she wanted to go to the store.
   - hide kevin: WITH FADE
   - text: Some time has passed and now it’s 1:00 PM. Kevin has finished all of his classes for the day.
   - show kevin: happy WITH FADE AT CENTER
@@ -27,7 +27,7 @@ dayOne:
   - show outdoor: WITH FADE CONTINUE
   - show jenny: normal WITH FADE AT RIGHT
   - text: This is Jenny, she is Kevin’s neighbor and childhood friend.
-  - text: She is 15 years old and she also attends Great Nanjing High School.
+  - text: She is also 15 years old and she attends Great Nanjing High School.
   - show kevin: happy WITH FADE AT LEFT
   - kevin says: Hi, Jenny! How were classes?
   - jenny says: Same old. Nothing new. How was your class?
@@ -136,15 +136,63 @@ dayOne:
   
   #Transition scene from afternoon to night to day
   - show afternoon:
-  - text: DAY 1 END
+  - text: The first day has ended
   - show night: WITH FADE
+  - wait: 400
   - show day: WITH FADE
+  - wait: 400
   - hide ALL:
   - scene: dayTwo
 
 dayTwo:
+  - effect SHOWTITLE: 
+    title: "Day 2" 
+  - if ({health} > 1):
+    - scene: goodEnding
+  - else:
+    - scene: badEnding
+
+goodEnding:
+  - effect SHOWTITLE: 
+    title: "Good Ending"
   - show day: WITH FADE
-  - text: DAY 2 START
+  - text: Today is the start of a new day
+  - text: Let's see what will happen today
+  - hide ALL: WITH FADE
+
+  #Before the final scene
+  - show room:
+  - show kevin: normal AT CENTER
+  - kevin says: "*wakes up*"
+  - kevin says happy: A brand new day!
+  - kevin says sad: Another day to study... 
+  - kevin says normal: But I think Jenny is coming over today to study, so it ain't all bad. Let’s get ready.
+  - hide ALL: WITH FADE
+
+  - show living_room:
+  - text: Jenny arrives shortly after.
+
+  - show jenny: happy AT LEFT WITH FADE
+  - jenny says: Hey, hey!
+  - jenny says: I brought some snacks to help us stay awake during our study session.
+  - show kevin: happy AT RIGHT WITH FADE
+  - kevin says: Hey! You shouldn't have!
+  - text: And their days went on like normal. 
+  - text: They practiced proper health precautions daily and soon enough a vaccine was developed and the world was fine again.
+  - hide ALL: WITH FADE
+
+  - show doctor_office:
+  - show doctor: AT CENTER
+  - doctor says: You’ve successfully taken the steps needed to prevent the spread of the coronavirus.
+  - doctor says: You should still continue to live with exercised caution.
+  - scene: end
+
+badEnding:
+  - effect SHOWTITLE: 
+    title: "Bad Ending"
+  - show day: WITH FADE
+  - text: Today is the start of a new day
+  - text: Let's see what will happen today
   - hide ALL: WITH FADE
 
   #Before the final scene
@@ -167,37 +215,16 @@ dayTwo:
   - jenny says sad: That cough doesn’t sound too good…
   - jenny says: You should get it checked out. 
   - jenny says: The doctor’s office is still open today, and we can still make it.
-  - kevin says normal: (What should I do?)
-  - choice:
-    - Don't go:
-      - var health: "{health} - 1"
-      - kevin says normal: It's a small cough. Don't worry about it!
-      - kevin says happy: We should start studying.
-      - jenny says normal: No. 
-      - jenny says: Your health is important. We’re going.
-      - jenny says: Our study session can wait.
-      - kevin says normal: Uhh-
-    - Go:
-      - kevin says normal: You're right. Let's go.
+  - kevin says normal: You're right. Let's go.
   - jenny says sick: Here, wear this face mask too.
   - hide ALL: WITH FADE CONTINUE
 
+  - effect SHOWTITLE: 
+    title: "Doctor's Office"
   - show doctor_office:
-  - text: At the doctor's office...
   - show kevin: sick AT LEFT
   - show doctor: AT CENTER
   - show jenny: sick AT RIGHT
-  - if ({health} > 4):
-    - scene: goodEnding
-  - else:
-    - scene: badEnding
-
-goodEnding:
-  - doctor says: You’ve successfully taken the steps needed to prevent the spread of the coronavirus.
-  - doctor says: You should still continue to live with exercised caution.
-  - scene: end
-
-badEnding:
   - doctor says: Unfortunately, you have contracted the coronavirus and must be quarantined.
   - kevin says: Wh-What?!
   - doctor says: The virus that causes COVID-19 seems to be spreading easily and sustainably in the community.

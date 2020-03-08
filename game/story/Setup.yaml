@@ -1,7 +1,7 @@
 backgrounds:
   afternoon: assets/backgrounds/afternoon.jpg
   day: assets/backgrounds/day.jpg
-  night: assets/backgrounds/day.jpg
+  night: assets/backgrounds/night.jpg
   room: assets/backgrounds/bedroom-morning.png
   room_night: assets/backgrounds/bedroom-afternoon.png
   living_room: assets/backgrounds/livingroom.jpg
